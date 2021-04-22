@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: local('Avenir-Roman'), url(./fonts/avenir-roman.woff) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #040714;
+  color: #F9F9F9;
+  
+  font-family: 'Avenir-Roman', sans-serif;
+}
+
+a {
+  color: #F9F9F9;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768.px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+}
