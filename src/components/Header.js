@@ -19,12 +19,17 @@ const Header = (props) => {
   const userPhoto = useSelector(selectUserPhoto);
 
   useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        setUser(user);
-        history.push("/home");
-      }
-    });
+    if (userName == "Guest") {
+      history.push("/home");
+    } else {
+      auth.onAuthStateChanged(async (user) => {
+        if (user) {
+          setUser(user);
+          console.log(user);
+          history.push("/home");
+        }
+      });
+    }
   }, [userName]);
 
   const handleAuth = () => {
@@ -37,6 +42,11 @@ const Header = (props) => {
         .catch((err) => {
           console.log(err.message);
         });
+
+      history.push("/home");
+    } else if (userName == "guest") {
+      dispatch(setSignOutState());
+      history.push("/");
     } else if (userName) {
       auth
         .signOut()
@@ -62,6 +72,7 @@ const Header = (props) => {
 
   const handleAuthGuest = () => {
     dispatch(setGuestLoginDetails());
+    history.push("/home");
   };
 
   return (
@@ -117,7 +128,7 @@ const Nav = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 80px;
   background-color: #090b13;
   display: flex;
   justify-content: space-between;
@@ -234,7 +245,7 @@ const Login = styled.a`
 `;
 
 const UserImg = styled.img`
-  height: 100%;
+  height: 80%;
 `;
 
 const DropDown = styled.div`
