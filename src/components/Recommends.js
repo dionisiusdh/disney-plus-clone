@@ -8,7 +8,7 @@ const Recommends = (props) => {
 
   return (
     <Container>
-      <h4>Recommended for You</h4>
+      <h3>Recommended for You</h3>
       <Content>
         {movies &&
           movies.map((movie, key) => (
