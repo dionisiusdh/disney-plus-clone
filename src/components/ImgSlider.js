@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,27 +16,23 @@ const ImgSlider = (props) => {
   return (
     <Carousel {...settings}>
       <Wrap>
-        {/*eslint-disable-next-line*/}
-        <a href="#">
-          <img src="./images/slider-badging.jpg" alt="" />
+        <a>
+          <img src="./images/slider-badging.jpg" />
         </a>
       </Wrap>
       <Wrap>
-        {/*eslint-disable-next-line*/}
-        <a href="#">
-          <img src="./images/slider-scale.jpg" alt="" />
+        <a>
+          <img src="./images/slider-scale.jpg" />
         </a>
       </Wrap>
       <Wrap>
-        {/*eslint-disable-next-line*/}
-        <a href="#">
-          <img src="./images/slider-badag.jpg" alt="" />
+        <a>
+          <img src="./images/slider-badag.jpg" />
         </a>
       </Wrap>
       <Wrap>
-        {/*eslint-disable-next-line*/}
-        <a href="#">
-          <img src="./images/slider-scales.jpg" alt="" />
+        <a>
+          <img src="./images/slider-scales.jpg" />
         </a>
       </Wrap>
     </Carousel>
