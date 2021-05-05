@@ -16,3 +16,4 @@ jobs:
           projectId: disney-plus-clone-23ce8
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          CI: false
