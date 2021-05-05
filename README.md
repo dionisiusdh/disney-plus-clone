@@ -1,6 +1,6 @@
 # Disney+ Clone
 
-[Live Demo](https://disney-plus-clone-23ce8.web.app/)
+[**Live Demo**](https://disney-plus-clone-23ce8.web.app/)
 
 ![](./img/1.jpg)
 ![](./img/2.png)
