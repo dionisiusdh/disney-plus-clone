@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {
   selectUserName,
-  selectUserEmail,
   selectUserPhoto,
   setUserLoginDetails,
   setGuestLoginDetails,
@@ -19,7 +18,7 @@ const Header = (props) => {
   const userPhoto = useSelector(selectUserPhoto);
 
   useEffect(() => {
-    if (userName == "Guest") {
+    if (userName === "Guest") {
       history.push("/home");
     } else {
       auth.onAuthStateChanged(async (user) => {
@@ -44,7 +43,7 @@ const Header = (props) => {
         });
 
       history.push("/home");
-    } else if (userName == "guest") {
+    } else if (userName === "guest") {
       dispatch(setSignOutState());
       history.push("/");
     } else if (userName) {
@@ -90,7 +89,7 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href="./home">
+            <a href="/home">
               <img src="./images/home-icon.svg" alt="home" />
               <span>HOME</span>
             </a>
