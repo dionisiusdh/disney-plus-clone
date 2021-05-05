@@ -94,19 +94,19 @@ const Header = (props) => {
               <img src="./images/home-icon.svg" alt="home" />
               <span>HOME</span>
             </a>
-            <a href="./search">
+            <a href="#">
               <img src="./images/search-icon.svg" alt="searcg" />
               <span>SEARCH</span>
             </a>
-            <a href="./watchlist">
+            <a href="#">
               <img src="./images/watchlist-icon.svg" alt="watchlist" />
               <span>WATCHLIST</span>
             </a>
-            <a href="./original">
+            <a href="#">
               <img src="./images/original-icon.svg" alt="original" />
               <span>ORIGINAL</span>
             </a>
-            <a href="./series">
+            <a href="#">
               <img src="./images/series-icon.svg" alt="series" />
               <span>SERIES</span>
             </a>
@@ -145,6 +145,7 @@ const Logo = styled.a`
   max-height: 70px;
   font-size: 0;
   display: inline-block;
+
   img {
     display: block;
     width: 100%;
@@ -167,6 +168,7 @@ const NavMenu = styled.div`
     display: flex;
     align-items: center;
     padding: 0 12px;
+
     img {
       height: 20px;
       min-width: 20px;
@@ -174,6 +176,7 @@ const NavMenu = styled.div`
       margin-right: 3px;
       z-index: auto;
     }
+
     span {
       color: rgb(249, 249, 249);
       font-size: 13px;
@@ -207,9 +210,6 @@ const NavMenu = styled.div`
       }
     }
   }
-  /* @media (max-width: 768px) {
-    display: none;
-  } */
 `;
 
 const LoginMenu = styled.div`
