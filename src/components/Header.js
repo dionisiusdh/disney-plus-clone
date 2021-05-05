@@ -29,6 +29,7 @@ const Header = (props) => {
         }
       });
     }
+    //eslint-disable-next-line
   }, [userName]);
 
   const handleAuth = () => {
@@ -93,18 +94,22 @@ const Header = (props) => {
               <img src="./images/home-icon.svg" alt="home" />
               <span>HOME</span>
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
               <img src="./images/search-icon.svg" alt="searcg" />
               <span>SEARCH</span>
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
               <img src="./images/watchlist-icon.svg" alt="watchlist" />
               <span>WATCHLIST</span>
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
               <img src="./images/original-icon.svg" alt="original" />
               <span>ORIGINAL</span>
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
               <img src="./images/series-icon.svg" alt="series" />
               <span>SERIES</span>

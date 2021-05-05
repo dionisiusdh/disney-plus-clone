@@ -15,23 +15,27 @@ const ImgSlider = (props) => {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <a>
-          <img src="./images/slider-badging.jpg" />
+        {/*eslint-disable-next-line*/}
+        <a href="#">
+          <img src="./images/slider-badging.jpg" alt="" />
         </a>
       </Wrap>
       <Wrap>
-        <a>
-          <img src="./images/slider-scale.jpg" />
+        {/*eslint-disable-next-line*/}
+        <a href="#">
+          <img src="./images/slider-scale.jpg" alt="" />
         </a>
       </Wrap>
       <Wrap>
-        <a>
-          <img src="./images/slider-badag.jpg" />
+        {/*eslint-disable-next-line*/}
+        <a href="#">
+          <img src="./images/slider-badag.jpg" alt="" />
         </a>
       </Wrap>
       <Wrap>
-        <a>
-          <img src="./images/slider-scales.jpg" />
+        {/*eslint-disable-next-line*/}
+        <a href="#">
+          <img src="./images/slider-scales.jpg" alt="" />
         </a>
       </Wrap>
     </Carousel>

@@ -21,19 +21,25 @@ const Home = (props) => {
 
   useEffect(() => {
     db.collection("movies").onSnapshot((snapshot) => {
+      //eslint-disable-next-line
       snapshot.docs.map((doc) => {
         console.log(recommends);
+        //eslint-disable-next-line
         switch (doc.data().type) {
           case "recommend":
+            //eslint-disable-next-line
             recommends = [...recommends, { id: doc.id, ...doc.data() }];
             break;
           case "new":
+            //eslint-disable-next-line
             newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }];
             break;
           case "original":
+            //eslint-disable-next-line
             originals = [...originals, { id: doc.id, ...doc.data() }];
             break;
           case "trending":
+            //eslint-disable-next-line
             trending = [...trending, { id: doc.id, ...doc.data() }];
             break;
         }
