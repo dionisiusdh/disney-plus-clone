@@ -10,7 +10,7 @@
 ## Features
 
 - User and Guest Authentication (with Redux and Fireauth)
-- Realtime dynamic data (with Firestore)
+- Realtime Dynamic Data (with Firestore)
 - Interactive Components (with React Styled Components)
 - Fully Responsive Front-end
 

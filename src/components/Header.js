@@ -78,7 +78,9 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="./images/logo.svg" alt="disney+" />
+        <a href="/home">
+          <img src="./images/logo.svg" alt="disney+" />
+        </a>
       </Logo>
       {!userName ? (
         <>
@@ -114,7 +116,27 @@ const Header = (props) => {
           <SignOut>
             <UserImg src={userPhoto} alt={userName} />
             <DropDown>
-              <span onClick={handleAuth}>Sign out</span>
+              <DropDownItem>
+                <img src="./images/home-icon.svg" alt="home" />
+                <a href="/home">Home</a>
+              </DropDownItem>
+              <DropDownItem>
+                <img src="./images/search-icon.svg" alt="home" />
+                <a href="/home">Search</a>
+              </DropDownItem>
+              <DropDownItem>
+                <img src="./images/watchlist-icon.svg" alt="home" />
+                <a href="/home">Watchlist</a>
+              </DropDownItem>
+              <DropDownItem>
+                <img src="./images/original-icon.svg" alt="home" />
+                <a href="/home">Original</a>
+              </DropDownItem>
+              <DropDownItem>
+                <img src="./images/series-icon.svg" alt="home" />
+                <a href="/home">Series</a>
+              </DropDownItem>
+              <a onClick={handleAuth}>Sign Out</a>
             </DropDown>
           </SignOut>
         </>
@@ -141,14 +163,21 @@ const Nav = styled.nav`
 const Logo = styled.a`
   padding: 0;
   width: 80px;
+  height: 60px;
+  min-width: 80px;
+  min-height: 50px;
   margin-top: 4px;
-  max-height: 70px;
   font-size: 0;
   display: inline-block;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -185,6 +214,7 @@ const NavMenu = styled.div`
       padding: 2px 0px;
       white-space: nowrap;
       position: relative;
+
       &:before {
         background-color: rgb(249, 249, 249);
         border-radius: 0px 0px 4px 4px;
@@ -202,6 +232,7 @@ const NavMenu = styled.div`
         width: auto;
       }
     }
+
     &:hover {
       span:before {
         transform: scaleX(1);
@@ -209,6 +240,10 @@ const NavMenu = styled.div`
         opacity: 1 !important;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -259,8 +294,43 @@ const DropDown = styled.div`
   padding: 10px;
   font-size: 14px;
   letter-spacing: 3px;
-  width: 100px;
+  width: 105px;
   opacity: 0;
+
+  @media (max-width: 768px) {
+    width: 120px;
+
+    a {
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+  }
+`;
+
+const DropDownItem = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    a {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
+    }
+  }
 `;
 
 const SignOut = styled.div`
