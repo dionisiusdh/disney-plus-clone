@@ -19,7 +19,7 @@ const userSlice = createSlice({
     setGuestLoginDetails: (state) => {
       state.name = "Guest";
       state.email = null;
-      state.photo = "https://www.casildasapartments.com/images/user.png";
+      state.photo = "./images/anonymous.png";
     },
 
     setSignOutState: (state) => {
@@ -30,11 +30,8 @@ const userSlice = createSlice({
   },
 });
 
-export const {
-  setUserLoginDetails,
-  setGuestLoginDetails,
-  setSignOutState,
-} = userSlice.actions;
+export const { setUserLoginDetails, setGuestLoginDetails, setSignOutState } =
+  userSlice.actions;
 
 export const selectUserName = (state) => state.user.name;
 export const selectUserEmail = (state) => state.user.email;
